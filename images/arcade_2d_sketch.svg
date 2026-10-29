@@ -1,0 +1,256 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" style="background-color: #0b111e; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;">
+  <defs>
+    <!-- Grid Pattern -->
+    <pattern id="blueprint-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#162238" stroke-width="0.8" />
+    </pattern>
+    <pattern id="blueprint-major-grid" width="100" height="100" patternUnits="userSpaceOnUse">
+      <rect width="100" height="100" fill="url(#blueprint-grid)" />
+      <path d="M 100 0 L 0 0 0 100" fill="none" stroke="#1f3254" stroke-width="1.2" />
+    </pattern>
+
+    <!-- Gradients -->
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e2638" />
+      <stop offset="100%" stop-color="#121824" />
+    </linearGradient>
+
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a1526" />
+      <stop offset="100%" stop-color="#050b14" />
+    </linearGradient>
+
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" />
+      <stop offset="100%" stop-color="#00bbf9" />
+    </linearGradient>
+
+    <linearGradient id="neonGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe49e" />
+      <stop offset="100%" stop-color="#f4a261" />
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Grid -->
+  <rect width="1000" height="680" fill="url(#blueprint-major-grid)" />
+
+  <!-- Sheet Header / Title Block -->
+  <g id="title-block">
+    <rect x="30" y="25" width="940" height="50" rx="6" fill="#111a2c" stroke="#2a3f68" stroke-width="1.5" />
+    <text x="50" y="57" font-size="20" font-weight="700" fill="#00f5d4" letter-spacing="1.5">MINI CASINO ARCADE — 2D MECHANICAL &amp; ERGONOMIC SKETCH</text>
+    <text x="730" y="56" font-size="13" font-family="monospace" fill="#88a2ce">SCALE 1:1 | METRIC (mm) | VER 1.0</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- FIGURE 1: FRONT ELEVATION / CONSOLE FACEPLATE                        -->
+  <!-- ===================================================================== -->
+  <g id="front-elevation" transform="translate(60, 110)">
+    <!-- Dimension Marker: Width (140mm) -->
+    <line x1="0" y1="-25" x2="480" y2="-25" stroke="#4cc9f0" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="0" y1="-32" x2="0" y2="-18" stroke="#4cc9f0" stroke-width="1.2" />
+    <line x1="480" y1="-32" x2="480" y2="-18" stroke="#4cc9f0" stroke-width="1.2" />
+    <text x="240" y="-30" font-size="12" font-family="monospace" fill="#4cc9f0" text-anchor="middle">TOTAL WIDTH: 140 mm</text>
+
+    <!-- Dimension Marker: Height (90mm) -->
+    <line x1="-25" y1="0" x2="-25" y2="300" stroke="#4cc9f0" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="-32" y1="0" x2="-18" y2="0" stroke="#4cc9f0" stroke-width="1.2" />
+    <line x1="-32" y1="300" x2="-18" y2="300" stroke="#4cc9f0" stroke-width="1.2" />
+    <text x="-32" y="155" font-size="12" font-family="monospace" fill="#4cc9f0" text-anchor="middle" transform="rotate(-90, -32, 155)">HEIGHT: 90 mm</text>
+
+    <!-- Main Chassis Shell -->
+    <rect x="0" y="0" width="480" height="300" rx="22" fill="url(#bodyGrad)" stroke="#4361ee" stroke-width="2.5" />
+    <!-- Inner Chamfer Inset -->
+    <rect x="6" y="6" width="468" height="288" rx="18" fill="none" stroke="#253553" stroke-width="1.2" stroke-dasharray="3,3" />
+
+    <!-- Top Features: Slide Switch & USB-C -->
+    <!-- Power Slide Switch (Top Edge) -->
+    <rect x="60" y="-14" width="40" height="14" rx="3" fill="#2d3748" stroke="#718096" stroke-width="1.5" />
+    <rect x="64" y="-12" width="16" height="10" rx="2" fill="#e53e3e" />
+    <text x="80" y="-19" font-size="10" font-family="monospace" fill="#fc8181" text-anchor="middle">POWER SW</text>
+
+    <!-- USB-C Charging Port (Top Edge) -->
+    <rect x="360" y="-10" width="34" height="10" rx="4" fill="#1a202c" stroke="#4a5568" stroke-width="1.5" />
+    <text x="377" y="-16" font-size="10" font-family="monospace" fill="#a0aec0" text-anchor="middle">USB-C 5V</text>
+
+    <!-- Speaker Grille Holes (Top Left) -->
+    <g id="speaker-grille" transform="translate(36, 32)">
+      <circle cx="0" cy="0" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="7" cy="0" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="14" cy="0" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="0" cy="7" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="7" cy="7" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="14" cy="7" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="0" cy="14" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="7" cy="14" r="2.2" fill="#48bb78" opacity="0.8" />
+      <circle cx="14" cy="14" r="2.2" fill="#48bb78" opacity="0.8" />
+      <text x="26" y="11" font-size="10" font-family="monospace" fill="#68d391">PIEZO BUZZER</text>
+    </g>
+
+    <!-- NeoPixel RGB Indicator (Top Center) -->
+    <circle cx="240" cy="24" r="6" fill="#f72585" stroke="#ffffff" stroke-width="1.5" filter="url(#glow)" />
+    <text x="240" y="12" font-size="9" font-family="monospace" fill="#f72585" text-anchor="middle">STATUS/WIN LED</text>
+
+    <!-- 3.3" TFT Display Outer Bezel -->
+    <rect x="110" y="38" width="260" height="186" rx="8" fill="#080c14" stroke="#ffd166" stroke-width="2" />
+    <rect x="114" y="42" width="252" height="178" rx="6" fill="url(#screenGrad)" />
+
+    <!-- Simulated On-Screen Casino Graphics -->
+    <rect x="120" y="48" width="240" height="20" fill="#132038" />
+    <text x="126" y="62" font-size="11" font-weight="bold" fill="#00f5d4">MINI ARCADE</text>
+    <rect x="290" y="51" width="64" height="14" rx="2" fill="#0b111e" stroke="#ffd166" stroke-width="0.8" />
+    <text x="294" y="62" font-size="9" font-family="monospace" fill="#ffd166">$ CR: 1000</text>
+
+    <!-- Screen Mockup: 3 Slot Reels Window -->
+    <rect x="135" y="80" width="210" height="74" rx="4" fill="#0d192e" stroke="#f72585" stroke-width="1.5" />
+    <!-- Reel 1 -->
+    <rect x="145" y="88" width="55" height="58" rx="4" fill="#182846" stroke="#2b4372" />
+    <circle cx="165" cy="120" r="10" fill="#e53e3e" />
+    <circle cx="180" cy="120" r="10" fill="#e53e3e" />
+    <!-- Reel 2 -->
+    <rect x="212" y="88" width="55" height="58" rx="4" fill="#182846" stroke="#2b4372" />
+    <text x="232" y="130" font-size="34" font-weight="900" fill="#f72585">7</text>
+    <!-- Reel 3 -->
+    <rect x="280" y="88" width="55" height="58" rx="4" fill="#182846" stroke="#2b4372" />
+    <polygon points="307,95 292,118 322,118" fill="#ffd166" />
+    <polygon points="307,138 292,115 322,115" fill="#ffd166" />
+
+    <text x="240" y="180" font-size="10" font-family="monospace" fill="#00f5d4" text-anchor="middle">3.2"/3.3" TFT (320 x 240)</text>
+
+    <!-- =================================================================== -->
+    <!-- CONTROLS: D-PAD (LEFT SIDE)                                        -->
+    <!-- =================================================================== -->
+    <g id="dpad-cluster" transform="translate(62, 175)">
+      <!-- D-Pad Base Cross Plate -->
+      <path d="M 16 -12 L 32 -12 L 32 16 L 60 16 L 60 32 L 32 32 L 32 60 L 16 60 L 16 32 L -12 32 L -12 16 L 16 16 Z" 
+            fill="#182338" stroke="#31456d" stroke-width="1.5" />
+
+      <!-- UP Button -->
+      <circle cx="24" cy="-2" r="11" fill="#2d3748" stroke="#4a5568" stroke-width="1.5" />
+      <polygon points="24,-7 19,0 29,0" fill="#00f5d4" />
+      <text x="24" y="-17" font-size="9" font-family="monospace" fill="#a0aec0" text-anchor="middle">UP</text>
+
+      <!-- DOWN Button -->
+      <circle cx="24" cy="50" r="11" fill="#2d3748" stroke="#4a5568" stroke-width="1.5" />
+      <polygon points="24,55 19,48 29,48" fill="#00f5d4" />
+      <text x="24" y="73" font-size="9" font-family="monospace" fill="#a0aec0" text-anchor="middle">DOWN</text>
+
+      <!-- LEFT Button -->
+      <circle cx="-2" cy="24" r="11" fill="#2d3748" stroke="#4a5568" stroke-width="1.5" />
+      <polygon points="-7,24 0,19 0,29" fill="#00f5d4" />
+      <text x="-2" y="44" font-size="9" font-family="monospace" fill="#a0aec0" text-anchor="middle">LEFT</text>
+
+      <!-- RIGHT Button -->
+      <circle cx="50" cy="24" r="11" fill="#2d3748" stroke="#4a5568" stroke-width="1.5" />
+      <polygon points="55,24 48,19 48,29" fill="#00f5d4" />
+      <text x="50" y="44" font-size="9" font-family="monospace" fill="#a0aec0" text-anchor="middle">RIGHT</text>
+
+      <text x="24" y="94" font-size="10" font-weight="bold" fill="#00f5d4" text-anchor="middle">NAV / BET</text>
+    </g>
+
+    <!-- =================================================================== -->
+    <!-- CONTROLS: ACTION BUTTON (RIGHT SIDE)                               -->
+    <!-- =================================================================== -->
+    <g id="action-cluster" transform="translate(415, 200)">
+      <!-- Glowing Bezel -->
+      <circle cx="0" cy="0" r="28" fill="#1b2a47" stroke="#ffd166" stroke-width="2" />
+      <circle cx="0" cy="0" r="23" fill="#e63946" stroke="#ffffff" stroke-width="1.8" filter="url(#glow)" />
+      <circle cx="0" cy="0" r="17" fill="#d90429" />
+      
+      <text x="0" y="5" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">SPIN</text>
+      <text x="0" y="44" font-size="10" font-weight="bold" fill="#ffd166" text-anchor="middle">SELECT / PLAY</text>
+    </g>
+
+    <!-- Bottom Branding Subtext -->
+    <text x="240" y="278" font-size="12" font-weight="bold" fill="#4a5568" text-anchor="middle" letter-spacing="2">★ RETRO ARCADE POCKET EDITION ★</text>
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- FIGURE 2: SIDE PROFILE & STACKUP VIEW (RIGHT SIDE)                   -->
+  <!-- ===================================================================== -->
+  <g id="side-elevation" transform="translate(630, 110)">
+    <text x="120" y="-12" font-size="14" font-weight="700" fill="#4cc9f0" text-anchor="middle">SIDE SECTION &amp; STACKUP</text>
+
+    <!-- Side View Dimension: Depth (28mm) -->
+    <line x1="20" y1="-25" x2="150" y2="-25" stroke="#4cc9f0" stroke-width="1.2" stroke-dasharray="4,3" />
+    <line x1="20" y1="-32" x2="20" y2="-18" stroke="#4cc9f0" stroke-width="1.2" />
+    <line x1="150" y1="-32" x2="150" y2="-18" stroke="#4cc9f0" stroke-width="1.2" />
+    <text x="85" y="-30" font-size="11" font-family="monospace" fill="#4cc9f0" text-anchor="middle">DEPTH: 28 mm</text>
+
+    <!-- Outer Shell Side Profile -->
+    <rect x="20" y="0" width="130" height="300" rx="14" fill="#131a28" stroke="#4361ee" stroke-width="2" />
+
+    <!-- Internal Layers (Stackup) -->
+    <!-- 1. Front Bezel / Faceplate (3mm) -->
+    <rect x="22" y="10" width="12" height="280" rx="2" fill="#24334f" stroke="#3b527d" />
+    <text x="12" y="50" font-size="9" font-family="monospace" fill="#88a2ce" text-anchor="end">Faceplate (3mm)</text>
+    <line x1="14" y1="47" x2="26" y2="47" stroke="#88a2ce" stroke-width="0.8" />
+
+    <!-- 2. TFT Display Module (4mm) -->
+    <rect x="36" y="38" width="14" height="186" fill="#0d1b30" stroke="#ffd166" />
+    <text x="12" y="110" font-size="9" font-family="monospace" fill="#ffd166" text-anchor="end">3.3" TFT Module</text>
+    <line x1="14" y1="107" x2="38" y2="107" stroke="#ffd166" stroke-width="0.8" />
+
+    <!-- 3. Pushbutton switches (extending through front) -->
+    <rect x="14" y="200" width="18" height="24" rx="2" fill="#e63946" stroke="#ffffff" stroke-width="1" />
+    <text x="12" y="215" font-size="9" font-family="monospace" fill="#f72585" text-anchor="end">Button Switch</text>
+    <line x1="14" y1="212" x2="20" y2="212" stroke="#f72585" stroke-width="0.8" />
+
+    <!-- 4. Breadboard / Perfboard Core (10mm) -->
+    <rect x="56" y="20" width="22" height="260" rx="3" fill="#1b4332" stroke="#2d6a4f" stroke-width="1.2" />
+    <text x="165" y="70" font-size="9" font-family="monospace" fill="#52b788">Perfboard / Core</text>
+    <line x1="78" y1="67" x2="160" y2="67" stroke="#52b788" stroke-width="0.8" />
+
+    <!-- 5. ESP32 DevKit mounted via headers -->
+    <rect x="78" y="90" width="24" height="120" rx="2" fill="#2d3748" stroke="#a0aec0" />
+    <text x="165" y="145" font-size="9" font-family="monospace" fill="#e2e8f0">ESP32 DevKit</text>
+    <line x1="102" y1="142" x2="160" y2="142" stroke="#e2e8f0" stroke-width="0.8" />
+
+    <!-- 6. 3.7V LiPo Battery Pack (Back chamber) -->
+    <rect x="80" y="215" width="28" height="60" rx="4" fill="#2c5282" stroke="#63b3ed" />
+    <text x="165" y="248" font-size="9" font-family="monospace" fill="#90cdf4">3.7V LiPo Battery</text>
+    <line x1="108" y1="245" x2="160" y2="245" stroke="#90cdf4" stroke-width="0.8" />
+
+    <!-- 7. Back Shell / Battery Cover -->
+    <rect x="136" y="10" width="12" height="280" rx="2" fill="#1e2638" stroke="#2d3748" />
+  </g>
+
+  <!-- ===================================================================== -->
+  <!-- CALLOUT ANNOTATIONS & FABRICATION TIPS (BOTTOM PANEL)                -->
+  <!-- ===================================================================== -->
+  <g id="notes-panel" transform="translate(60, 470)">
+    <rect x="0" y="0" width="880" height="175" rx="10" fill="#101726" stroke="#2a3c5a" stroke-width="1.5" />
+    
+    <text x="25" y="28" font-size="13" font-weight="bold" fill="#00f5d4">★ ENCLOSURE DESIGN &amp; ERGONOMIC SPECIFICATIONS:</text>
+
+    <text x="25" y="55" font-size="11" fill="#cbd5e0">
+      <tspan font-weight="bold" fill="#ffd166">1. Handheld Ergonomics:</tspan> 
+      Overall dimensions are 140 mm (W) × 90 mm (H) × 28 mm (D), providing comfortable two-handed grip with thumbs resting naturally on the D-Pad and Action button.
+    </text>
+
+    <text x="25" y="80" font-size="11" fill="#cbd5e0">
+      <tspan font-weight="bold" fill="#ffd166">2. Screen Placement:</tspan> 
+      The 3.2" / 3.3" TFT (approx. 72 × 55 mm visible bezel) is centered with a 2 mm protective acrylic window to shield the TFT glass from thumb pressure.
+    </text>
+
+    <text x="25" y="105" font-size="11" fill="#cbd5e0">
+      <tspan font-weight="bold" fill="#ffd166">3. Tactile Controls:</tspan> 
+      Standard 12×12 mm tactile switches with 12 mm colored round caps. Left D-Pad pitch is 24 mm center-to-center. Right SPIN button has a large 24 mm diameter arcade cap.
+    </text>
+
+    <text x="25" y="130" font-size="11" fill="#cbd5e0">
+      <tspan font-weight="bold" fill="#ffd166">4. Breadboard / Perfboard Mounting:</tspan> 
+      Internal standoff pillars (M3 × 12mm) suspend the perfboard 4 mm behind the TFT module, with the flat LiPo battery seated in the rear cavity.
+    </text>
+
+    <text x="25" y="155" font-size="11" fill="#cbd5e0">
+      <tspan font-weight="bold" fill="#ffd166">5. Ports &amp; Audio:</tspan> 
+      Top-mounted slide switch protects against accidental toggling. 9-hole acoustic grille directly vents the piezo buzzer for crisp 880 Hz casino ticks.
+    </text>
+  </g>
+</svg>
