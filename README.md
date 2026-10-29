@@ -46,10 +46,6 @@ The full electrical schematic is created in KiCad. Included in this repository:
 ![Mini Arcade Circuit Schematic Diagram](images/schematic.svg)
 *Complete KiCad circuit schematic showing ESP32 pinouts, SPI TFT connections, button inputs, buzzer, and power lines.*
 
-### 2D Enclosure Concept & Layout
-![2D Enclosure Concept Sketch](images/arcade_2d_sketch.svg)
-*2D mechanical design sketch illustrating the physical arcade faceplate, button arrangement, and enclosure profile.*
-
 ---
 
 ## Firmware Setup (Arduino IDE)
